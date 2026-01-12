@@ -1,0 +1,216 @@
+/*
+Theme Name: Earthbound
+Theme URI: https://earthbound.com
+Author: Adam Silverstein
+Author URI: https://earthbound.com
+Description: A retro 70s-inspired personal portfolio theme with modern WordPress APIs. Features warm earth tones, fluid typography, and full site editing support.
+Version: 1.0.0
+Requires at least: 6.7
+Tested up to: 6.7
+Requires PHP: 8.1
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: earthbound
+Tags: block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, one-column, portfolio, template-editing, translation-ready, wide-blocks
+
+Earthbound WordPress Theme, (C) 2024
+Earthbound is distributed under the terms of the GNU GPL.
+*/
+
+/* Visible focus indicators - never remove, only enhance */
+:focus-visible {
+    outline: 3px solid var(--wp--preset--color--primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Skip link styles */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 999999;
+    padding: 0.75rem 1.5rem;
+    background: var(--wp--preset--color--foreground);
+    color: var(--wp--preset--color--background);
+    font-family: var(--wp--preset--font-family--heading);
+    text-decoration: none;
+    border-radius: var(--wp--custom--border-radius--medium);
+}
+
+.skip-link:focus {
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+/* Screen reader text */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: var(--wp--preset--color--background);
+    clip: auto !important;
+    clip-path: none;
+    color: var(--wp--preset--color--foreground);
+    display: block;
+    font-size: 1rem;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Retro design elements */
+
+/* Rounded corners everywhere */
+.wp-block-group,
+.wp-block-cover,
+.wp-block-image img,
+.wp-block-post-featured-image img {
+    border-radius: var(--wp--custom--border-radius--medium);
+}
+
+/* Warm shadows */
+.has-shadow {
+    box-shadow: var(--wp--preset--shadow--warm);
+}
+
+/* Chunky button style */
+.wp-block-button.is-style-chunky .wp-block-button__link {
+    box-shadow: 4px 4px 0 var(--wp--preset--color--secondary);
+    transition: transform var(--wp--custom--transition--fast),
+                box-shadow var(--wp--custom--transition--fast);
+}
+
+.wp-block-button.is-style-chunky .wp-block-button__link:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--wp--preset--color--secondary);
+}
+
+.wp-block-button.is-style-chunky .wp-block-button__link:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--wp--preset--color--secondary);
+}
+
+/* Section dividers - wavy pattern */
+.section-divider {
+    width: 100%;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z' fill='%23F5E6D3'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Groovy card styles */
+.groovy-card {
+    background: var(--wp--preset--color--background);
+    border: 3px solid var(--wp--preset--color--secondary);
+    border-radius: var(--wp--custom--border-radius--large);
+    padding: 1.5rem;
+    box-shadow: var(--wp--preset--shadow--chunky);
+    transition: transform var(--wp--custom--transition--normal),
+                box-shadow var(--wp--custom--transition--normal);
+}
+
+.groovy-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--wp--preset--color--secondary);
+}
+
+/* Loading state styles */
+.is-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Feed item styles */
+.feed-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--wp--preset--color--background-alt);
+}
+
+.feed-item:last-child {
+    border-bottom: none;
+}
+
+.feed-item__title {
+    font-family: var(--wp--preset--font-family--heading);
+    font-size: var(--wp--preset--font-size--large);
+    margin-bottom: 0.5rem;
+}
+
+.feed-item__meta {
+    font-size: var(--wp--preset--font-size--small);
+    color: var(--wp--preset--color--foreground-muted);
+}
+
+.feed-item__label {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    background: var(--wp--preset--color--background-alt);
+    border-radius: var(--wp--custom--border-radius--pill);
+    font-size: var(--wp--preset--font-size--small);
+    margin-right: 0.25rem;
+}
+
+/* Load more button */
+.load-more-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+    border: none;
+    border-radius: var(--wp--custom--border-radius--pill);
+    font-family: var(--wp--preset--font-family--heading);
+    font-size: var(--wp--preset--font-size--medium);
+    cursor: pointer;
+    transition: background var(--wp--custom--transition--fast);
+}
+
+.load-more-button:hover {
+    background: var(--wp--preset--color--secondary);
+}
+
+.load-more-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Work section styles */
+.work-section {
+    margin-bottom: 4rem;
+}
+
+.work-section h2 {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--wp--preset--color--primary);
+}
