@@ -1,0 +1,58 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "title": "Harvest Gold",
+    "settings": {
+        "color": {
+            "palette": [
+                { "slug": "primary", "color": "#D4A03C", "name": "Primary" },
+                { "slug": "secondary", "color": "#8B4513", "name": "Secondary" },
+                { "slug": "tertiary", "color": "#C17817", "name": "Tertiary" },
+                { "slug": "background", "color": "#FDF5E6", "name": "Background" },
+                { "slug": "background-alt", "color": "#F5E6D3", "name": "Background Alt" },
+                { "slug": "foreground", "color": "#3D2914", "name": "Foreground" },
+                { "slug": "foreground-muted", "color": "#6B5344", "name": "Foreground Muted" },
+                { "slug": "accent", "color": "#B8860B", "name": "Accent" },
+                { "slug": "error", "color": "#A0522D", "name": "Error" },
+                { "slug": "success", "color": "#6B8E23", "name": "Success" }
+            ],
+            "gradients": [
+                {
+                    "slug": "warm-sunset",
+                    "gradient": "linear-gradient(135deg, #D4A03C 0%, #C17817 100%)",
+                    "name": "Warm Sunset"
+                },
+                {
+                    "slug": "earth-tones",
+                    "gradient": "linear-gradient(180deg, #FDF5E6 0%, #F5E6D3 100%)",
+                    "name": "Earth Tones"
+                }
+            ]
+        },
+        "shadow": {
+            "presets": [
+                {
+                    "slug": "natural",
+                    "shadow": "0 4px 6px -1px rgba(61, 41, 20, 0.1), 0 2px 4px -1px rgba(61, 41, 20, 0.06)",
+                    "name": "Natural"
+                },
+                {
+                    "slug": "warm",
+                    "shadow": "0 10px 25px -5px rgba(212, 160, 60, 0.25)",
+                    "name": "Warm"
+                },
+                {
+                    "slug": "chunky",
+                    "shadow": "4px 4px 0 #8B4513",
+                    "name": "Chunky"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--background)",
+            "text": "var(--wp--preset--color--foreground)"
+        }
+    }
+}
