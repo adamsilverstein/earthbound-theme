@@ -1,0 +1,32 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "earthbound/project-card",
+    "version": "1.0.0",
+    "title": "Project Card",
+    "category": "earthbound",
+    "icon": "portfolio",
+    "description": "Display a single project with image, title, and links.",
+    "keywords": ["project", "portfolio", "card", "work"],
+    "textdomain": "earthbound",
+    "supports": {
+        "html": false,
+        "className": true,
+        "color": {
+            "background": true,
+            "text": true
+        },
+        "spacing": {
+            "padding": true,
+            "margin": true
+        }
+    },
+    "attributes": {
+        "projectId": {
+            "type": "number",
+            "default": 0
+        }
+    },
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}
