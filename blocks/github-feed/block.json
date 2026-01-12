@@ -1,0 +1,34 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "earthbound/github-feed",
+    "version": "1.0.0",
+    "title": "GitHub Feed",
+    "category": "earthbound",
+    "icon": "marker",
+    "description": "Display GitHub activity and contributions.",
+    "keywords": ["github", "feed", "contributions", "issues"],
+    "textdomain": "earthbound",
+    "supports": {
+        "html": false,
+        "className": true,
+        "color": {
+            "background": true,
+            "text": true
+        },
+        "spacing": {
+            "padding": true,
+            "margin": true
+        },
+        "interactivity": true
+    },
+    "attributes": {
+        "perPage": {
+            "type": "number",
+            "default": 10
+        }
+    },
+    "viewScriptModule": "file:./view.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}
