@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "earthbound/navigation",
+    "version": "1.0.0",
+    "title": "Earthbound Navigation",
+    "category": "earthbound",
+    "icon": "menu",
+    "description": "An accessible navigation block with mobile menu support.",
+    "keywords": ["menu", "navigation", "nav", "links"],
+    "textdomain": "earthbound",
+    "supports": {
+        "align": ["wide", "full"],
+        "html": false,
+        "className": true,
+        "color": {
+            "background": true,
+            "text": true
+        },
+        "spacing": {
+            "padding": true,
+            "margin": true
+        },
+        "interactivity": true
+    },
+    "attributes": {
+        "menuSlug": {
+            "type": "string",
+            "default": "primary"
+        }
+    },
+    "viewScriptModule": "file:./view.js",
+    "style": "file:./style.css",
+    "render": "file:./render.php"
+}
