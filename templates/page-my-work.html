@@ -1,0 +1,61 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main Content"},"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+<main id="main-content" class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem" tabindex="-1">
+
+    <!-- wp:heading {"level":1,"className":"page-title","align":"wide"} -->
+    <h1 class="wp-block-heading alignwide page-title">My Work</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"page-intro","align":"wide","textColor":"foreground-muted","style":{"spacing":{"margin":{"bottom":"3rem"}}}} -->
+    <p class="alignwide page-intro has-foreground-muted-color has-text-color" style="margin-bottom:3rem">A collection of projects I've built and contributed to, along with my open source activity.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"work-section work-section--projects","align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
+    <div class="wp-block-group alignwide work-section work-section--projects" style="margin-bottom:4rem">
+
+        <!-- wp:heading {"level":2} -->
+        <h2 class="wp-block-heading">Featured Projects</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:pattern {"slug":"earthbound/project-grid"} /-->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"work-section work-section--github","align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
+    <div class="wp-block-group alignwide work-section work-section--github" style="margin-bottom:4rem">
+
+        <!-- wp:heading {"level":2} -->
+        <h2 class="wp-block-heading">GitHub Contributions</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"textColor":"foreground-muted","style":{"spacing":{"margin":{"bottom":"2rem"}}}} -->
+        <p class="has-foreground-muted-color has-text-color" style="margin-bottom:2rem">Recent issues I've closed and contributions across GitHub.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:earthbound/github-feed {"perPage":10} /-->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"work-section work-section--trac","align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
+    <div class="wp-block-group alignwide work-section work-section--trac" style="margin-bottom:4rem">
+
+        <!-- wp:heading {"level":2} -->
+        <h2 class="wp-block-heading">WordPress Core Contributions</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"textColor":"foreground-muted","style":{"spacing":{"margin":{"bottom":"2rem"}}}} -->
+        <p class="has-foreground-muted-color has-text-color" style="margin-bottom:2rem">My contributions to WordPress core via Trac.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:earthbound/trac-feed {"perPage":10} /-->
+
+    </div>
+    <!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
