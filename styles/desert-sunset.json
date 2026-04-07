@@ -5,16 +5,17 @@
     "settings": {
         "color": {
             "palette": [
-                { "slug": "primary", "color": "#E07B53", "name": "Primary" },
-                { "slug": "secondary", "color": "#8B5A2B", "name": "Secondary" },
-                { "slug": "tertiary", "color": "#CD853F", "name": "Tertiary" },
-                { "slug": "background", "color": "#FFF8F0", "name": "Background" },
-                { "slug": "background-alt", "color": "#FFE4C4", "name": "Background Alt" },
-                { "slug": "foreground", "color": "#4A3728", "name": "Foreground" },
-                { "slug": "foreground-muted", "color": "#7D6B5D", "name": "Foreground Muted" },
-                { "slug": "accent", "color": "#D2691E", "name": "Accent" },
-                { "slug": "error", "color": "#B22222", "name": "Error" },
-                { "slug": "success", "color": "#808000", "name": "Success" }
+                { "slug": "primary", "color": "#E07B53", "name": "Terracotta" },
+                { "slug": "secondary", "color": "#4A3020", "name": "Dark Sienna" },
+                { "slug": "tertiary", "color": "#CD853F", "name": "Sandy" },
+                { "slug": "background", "color": "#F2EDE6", "name": "Parchment" },
+                { "slug": "background-alt", "color": "#E8DFD4", "name": "Parchment Dark" },
+                { "slug": "foreground", "color": "#1C1816", "name": "Ink" },
+                { "slug": "foreground-muted", "color": "#6B5D52", "name": "Warm Grey" },
+                { "slug": "accent", "color": "#D2691E", "name": "Burnt Orange" },
+                { "slug": "dark", "color": "#1A1510", "name": "Dark Panel" },
+                { "slug": "error", "color": "#B22222", "name": "Firebrick" },
+                { "slug": "success", "color": "#808000", "name": "Olive" }
             ],
             "gradients": [
                 {
@@ -24,8 +25,8 @@
                 },
                 {
                     "slug": "earth-tones",
-                    "gradient": "linear-gradient(180deg, #FFF8F0 0%, #FFE4C4 100%)",
-                    "name": "Earth Tones"
+                    "gradient": "linear-gradient(180deg, #F2EDE6 0%, #E8DFD4 100%)",
+                    "name": "Parchment Fade"
                 }
             ]
         },
@@ -33,17 +34,17 @@
             "presets": [
                 {
                     "slug": "natural",
-                    "shadow": "0 4px 6px -1px rgba(74, 55, 40, 0.1), 0 2px 4px -1px rgba(74, 55, 40, 0.06)",
+                    "shadow": "0 4px 6px -1px rgba(28, 24, 22, 0.08), 0 2px 4px -1px rgba(28, 24, 22, 0.04)",
                     "name": "Natural"
                 },
                 {
                     "slug": "warm",
-                    "shadow": "0 10px 25px -5px rgba(224, 123, 83, 0.25)",
-                    "name": "Warm"
+                    "shadow": "0 10px 25px -5px rgba(224, 123, 83, 0.2)",
+                    "name": "Sunset Glow"
                 },
                 {
                     "slug": "chunky",
-                    "shadow": "4px 4px 0 #8B5A2B",
+                    "shadow": "4px 4px 0 #4A3020",
                     "name": "Chunky"
                 }
             ]
