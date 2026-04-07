@@ -110,7 +110,7 @@ Earthbound is distributed under the terms of the GNU GPL.
 }
 
 /* Newspaper navigation — vertical bar separators */
-.newspaper-nav .wp-block-navigation-item:not(:last-child)::after {
+.newspaper-nav > .wp-block-navigation__container > .wp-block-navigation-item:not(:last-child)::after {
     content: "|";
     margin-left: 0.5rem;
     color: var(--wp--preset--color--foreground-muted);
