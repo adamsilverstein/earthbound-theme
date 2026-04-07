@@ -4,27 +4,27 @@
  * @package Earthbound
  */
 
-/* Groovy card style for groups */
+/* Editorial card style for groups */
 .wp-block-group.is-style-groovy-card {
-    background: var(--wp--preset--color--background, #FDF5E6);
-    border: 3px solid var(--wp--preset--color--secondary, #8B4513);
-    border-radius: var(--wp--custom--border-radius--large, 1.5rem);
-    padding: 1.5rem;
-    box-shadow: var(--wp--preset--shadow--chunky);
-    transition: transform var(--wp--custom--transition--normal, 250ms ease),
-                box-shadow var(--wp--custom--transition--normal, 250ms ease);
+    background: var(--wp--preset--color--background, #F0EDE6);
+    border-top: 3px solid var(--wp--preset--color--secondary, #3D2B1F);
+    border-bottom: 1px solid var(--wp--preset--color--secondary, #3D2B1F);
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    padding: 1.5rem 0;
+    transition: border-color var(--wp--custom--transition--normal, 250ms ease);
 }
 
 .wp-block-group.is-style-groovy-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 var(--wp--preset--color--secondary, #8B4513);
+    border-top-color: var(--wp--preset--color--primary, #D4A03C);
 }
 
-/* Retro image style */
+/* Retro image style — newsprint sepia with sharp border */
 .wp-block-image.is-style-retro img {
-    filter: sepia(10%) contrast(95%) brightness(98%);
-    border: 4px solid var(--wp--preset--color--secondary, #8B4513);
-    border-radius: var(--wp--custom--border-radius--medium, 1rem);
+    filter: sepia(15%) contrast(105%) brightness(95%);
+    border: 2px solid var(--wp--preset--color--secondary, #3D2B1F);
+    border-radius: 0;
 }
 
 /* Chunky button style */
@@ -54,15 +54,15 @@
     margin-bottom: 1.5rem;
 }
 
-/* Post card hover effects */
+/* Post card hover effects — editorial style */
 .post-card {
-    transition: transform var(--wp--custom--transition--normal, 250ms ease),
-                box-shadow var(--wp--custom--transition--normal, 250ms ease);
+    border-top: 2px solid var(--wp--preset--color--secondary, #3D2B1F);
+    padding-top: 1rem;
+    transition: border-color var(--wp--custom--transition--normal, 250ms ease);
 }
 
 .post-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 var(--wp--preset--color--secondary, #8B4513);
+    border-top-color: var(--wp--preset--color--primary, #D4A03C);
 }
 
 /* Navigation link current page indicator */
@@ -73,27 +73,31 @@
     padding: 0.25rem 0.75rem;
 }
 
-/* Quote block styling */
+/* Pull quote / quote block — editorial style with hairline borders */
 .wp-block-quote {
     position: relative;
-    padding-left: 2rem;
+    padding: 1.5rem 0 1.5rem 2rem;
+    border-left: none;
+    border-top: 1px solid var(--wp--preset--color--secondary, #3D2B1F);
+    border-bottom: 1px solid var(--wp--preset--color--secondary, #3D2B1F);
+    margin: 2rem 0;
 }
 
 .wp-block-quote::before {
     content: "\201C";
     position: absolute;
     left: 0;
-    top: -0.5rem;
-    font-size: 4rem;
+    top: 0.5rem;
+    font-size: 5rem;
     font-family: var(--wp--preset--font-family--heading);
     color: var(--wp--preset--color--primary, #D4A03C);
-    opacity: 0.5;
+    opacity: 0.6;
     line-height: 1;
 }
 
 /* Code block styling */
 .wp-block-code {
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-family: var(--wp--preset--font-family--mono);
     font-size: 0.875rem;
     line-height: 1.6;
 }

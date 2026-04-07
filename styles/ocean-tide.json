@@ -5,16 +5,17 @@
     "settings": {
         "color": {
             "palette": [
-                { "slug": "primary", "color": "#5F9EA0", "name": "Primary" },
-                { "slug": "secondary", "color": "#2F4F4F", "name": "Secondary" },
-                { "slug": "tertiary", "color": "#20B2AA", "name": "Tertiary" },
-                { "slug": "background", "color": "#F0FFFF", "name": "Background" },
-                { "slug": "background-alt", "color": "#E0EEEE", "name": "Background Alt" },
-                { "slug": "foreground", "color": "#1C3D3D", "name": "Foreground" },
-                { "slug": "foreground-muted", "color": "#4A6B6B", "name": "Foreground Muted" },
-                { "slug": "accent", "color": "#48D1CC", "name": "Accent" },
-                { "slug": "error", "color": "#CD5C5C", "name": "Error" },
-                { "slug": "success", "color": "#3CB371", "name": "Success" }
+                { "slug": "primary", "color": "#5F9EA0", "name": "Cadet Blue" },
+                { "slug": "secondary", "color": "#1F3D3D", "name": "Dark Teal" },
+                { "slug": "tertiary", "color": "#20B2AA", "name": "Light Sea" },
+                { "slug": "background", "color": "#ECEEED", "name": "Sea Foam" },
+                { "slug": "background-alt", "color": "#E0E4E3", "name": "Sea Foam Dark" },
+                { "slug": "foreground", "color": "#181C1C", "name": "Ink" },
+                { "slug": "foreground-muted", "color": "#4A5858", "name": "Slate Grey" },
+                { "slug": "accent", "color": "#48D1CC", "name": "Turquoise" },
+                { "slug": "dark", "color": "#121816", "name": "Dark Panel" },
+                { "slug": "error", "color": "#CD5C5C", "name": "Indian Red" },
+                { "slug": "success", "color": "#3CB371", "name": "Sea Green" }
             ],
             "gradients": [
                 {
@@ -24,7 +25,7 @@
                 },
                 {
                     "slug": "earth-tones",
-                    "gradient": "linear-gradient(180deg, #F0FFFF 0%, #E0EEEE 100%)",
+                    "gradient": "linear-gradient(180deg, #ECEEED 0%, #E0E4E3 100%)",
                     "name": "Sea Mist"
                 }
             ]
@@ -33,17 +34,17 @@
             "presets": [
                 {
                     "slug": "natural",
-                    "shadow": "0 4px 6px -1px rgba(28, 61, 61, 0.1), 0 2px 4px -1px rgba(28, 61, 61, 0.06)",
+                    "shadow": "0 4px 6px -1px rgba(24, 28, 28, 0.08), 0 2px 4px -1px rgba(24, 28, 28, 0.04)",
                     "name": "Natural"
                 },
                 {
                     "slug": "warm",
-                    "shadow": "0 10px 25px -5px rgba(95, 158, 160, 0.25)",
-                    "name": "Warm"
+                    "shadow": "0 10px 25px -5px rgba(95, 158, 160, 0.2)",
+                    "name": "Ocean Glow"
                 },
                 {
                     "slug": "chunky",
-                    "shadow": "4px 4px 0 #2F4F4F",
+                    "shadow": "4px 4px 0 #1F3D3D",
                     "name": "Chunky"
                 }
             ]
