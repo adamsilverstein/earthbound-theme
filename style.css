@@ -86,6 +86,86 @@ Earthbound is distributed under the terms of the GNU GPL.
     }
 }
 
+/* Amber cyberpunk accent system */
+
+/* Amber headline glow on hover */
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+.wp-block-post-title a:hover {
+    text-shadow: 0 0 20px rgba(212, 160, 60, 0.35),
+                 0 0 40px rgba(212, 160, 60, 0.15);
+}
+
+/* Amber underline accent on links */
+.wp-block-post-content a:not(.wp-block-button__link) {
+    text-decoration: underline;
+    text-decoration-color: var(--wp--preset--color--primary);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    transition: text-decoration-color var(--wp--custom--transition--fast);
+}
+
+.wp-block-post-content a:not(.wp-block-button__link):hover {
+    text-decoration-color: var(--wp--preset--color--secondary);
+}
+
+/* Terminal badge — amber on dark for labels and metadata */
+.terminal-badge,
+.feed-item__label {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    background: var(--wp--preset--color--foreground);
+    color: var(--wp--preset--color--primary);
+    font-family: var(--wp--preset--font-family--mono, monospace);
+    font-size: var(--wp--preset--font-size--small);
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+}
+
+/* Amber glow shadow for cards */
+.has-amber-glow {
+    box-shadow: 0 0 15px rgba(212, 160, 60, 0.15),
+                0 0 30px rgba(212, 160, 60, 0.08);
+}
+
+/* Amber glow button variant */
+.wp-block-button.is-style-chunky .wp-block-button__link:hover {
+    box-shadow: 6px 6px 0 var(--wp--preset--color--secondary),
+                0 0 20px rgba(212, 160, 60, 0.25);
+}
+
+/* Dark panel sections — cyberpunk amber on dark */
+.has-dark-background-color {
+    color: var(--wp--preset--color--background);
+}
+
+.has-dark-background-color h1,
+.has-dark-background-color h2,
+.has-dark-background-color h3,
+.has-dark-background-color h4 {
+    color: var(--wp--preset--color--primary);
+}
+
+.has-dark-background-color a {
+    color: var(--wp--preset--color--primary);
+}
+
+.has-dark-background-color a:hover {
+    text-shadow: 0 0 15px rgba(212, 160, 60, 0.5);
+}
+
+/* Reduced motion — disable glow animations */
+@media (prefers-reduced-motion: reduce) {
+    h1 a:hover,
+    h2 a:hover,
+    h3 a:hover,
+    .wp-block-post-title a:hover,
+    .has-dark-background-color a:hover {
+        text-shadow: none;
+    }
+}
+
 /* Retro design elements */
 
 /* Rounded corners everywhere */
@@ -171,11 +251,6 @@ Earthbound is distributed under the terms of the GNU GPL.
 }
 
 .feed-item__label {
-    display: inline-block;
-    padding: 0.125rem 0.5rem;
-    background: var(--wp--preset--color--background-alt);
-    border-radius: var(--wp--custom--border-radius--pill);
-    font-size: var(--wp--preset--font-size--small);
     margin-right: 0.25rem;
 }
 
