@@ -5,27 +5,28 @@
     "settings": {
         "color": {
             "palette": [
-                { "slug": "primary", "color": "#D4A03C", "name": "Primary" },
-                { "slug": "secondary", "color": "#8B4513", "name": "Secondary" },
-                { "slug": "tertiary", "color": "#C17817", "name": "Tertiary" },
-                { "slug": "background", "color": "#FDF5E6", "name": "Background" },
-                { "slug": "background-alt", "color": "#F5E6D3", "name": "Background Alt" },
-                { "slug": "foreground", "color": "#3D2914", "name": "Foreground" },
-                { "slug": "foreground-muted", "color": "#6B5344", "name": "Foreground Muted" },
-                { "slug": "accent", "color": "#B8860B", "name": "Accent" },
-                { "slug": "error", "color": "#A0522D", "name": "Error" },
-                { "slug": "success", "color": "#6B8E23", "name": "Success" }
+                { "slug": "primary", "color": "#D4A03C", "name": "Amber" },
+                { "slug": "secondary", "color": "#3D2B1F", "name": "Dark Brown" },
+                { "slug": "tertiary", "color": "#8B7355", "name": "Warm Tan" },
+                { "slug": "background", "color": "#F0EDE6", "name": "Newsprint" },
+                { "slug": "background-alt", "color": "#E8E4DC", "name": "Newsprint Dark" },
+                { "slug": "foreground", "color": "#1A1A1A", "name": "Ink" },
+                { "slug": "foreground-muted", "color": "#5C5549", "name": "Warm Grey" },
+                { "slug": "accent", "color": "#D4A03C", "name": "Amber Accent" },
+                { "slug": "dark", "color": "#1A1712", "name": "Dark Panel" },
+                { "slug": "error", "color": "#8B0000", "name": "Dark Red" },
+                { "slug": "success", "color": "#556B2F", "name": "Olive" }
             ],
             "gradients": [
                 {
                     "slug": "warm-sunset",
-                    "gradient": "linear-gradient(135deg, #D4A03C 0%, #C17817 100%)",
-                    "name": "Warm Sunset"
+                    "gradient": "linear-gradient(135deg, #D4A03C 0%, #8B7355 100%)",
+                    "name": "Amber Wash"
                 },
                 {
                     "slug": "earth-tones",
-                    "gradient": "linear-gradient(180deg, #FDF5E6 0%, #F5E6D3 100%)",
-                    "name": "Earth Tones"
+                    "gradient": "linear-gradient(180deg, #F0EDE6 0%, #E8E4DC 100%)",
+                    "name": "Newsprint Fade"
                 }
             ]
         },
@@ -33,17 +34,17 @@
             "presets": [
                 {
                     "slug": "natural",
-                    "shadow": "0 4px 6px -1px rgba(61, 41, 20, 0.1), 0 2px 4px -1px rgba(61, 41, 20, 0.06)",
+                    "shadow": "0 4px 6px -1px rgba(26, 26, 26, 0.08), 0 2px 4px -1px rgba(26, 26, 26, 0.04)",
                     "name": "Natural"
                 },
                 {
                     "slug": "warm",
-                    "shadow": "0 10px 25px -5px rgba(212, 160, 60, 0.25)",
-                    "name": "Warm"
+                    "shadow": "0 10px 25px -5px rgba(212, 160, 60, 0.2)",
+                    "name": "Amber Glow"
                 },
                 {
                     "slug": "chunky",
-                    "shadow": "4px 4px 0 #8B4513",
+                    "shadow": "4px 4px 0 #3D2B1F",
                     "name": "Chunky"
                 }
             ]

@@ -5,16 +5,17 @@
     "settings": {
         "color": {
             "palette": [
-                { "slug": "primary", "color": "#6B8E23", "name": "Primary" },
-                { "slug": "secondary", "color": "#556B2F", "name": "Secondary" },
-                { "slug": "tertiary", "color": "#8FBC8F", "name": "Tertiary" },
-                { "slug": "background", "color": "#F5F5DC", "name": "Background" },
-                { "slug": "background-alt", "color": "#E8E4C9", "name": "Background Alt" },
-                { "slug": "foreground", "color": "#2F4F2F", "name": "Foreground" },
-                { "slug": "foreground-muted", "color": "#4A5D4A", "name": "Foreground Muted" },
-                { "slug": "accent", "color": "#9ACD32", "name": "Accent" },
-                { "slug": "error", "color": "#8B0000", "name": "Error" },
-                { "slug": "success", "color": "#228B22", "name": "Success" }
+                { "slug": "primary", "color": "#6B8E23", "name": "Olive Drab" },
+                { "slug": "secondary", "color": "#2F3D1F", "name": "Dark Forest" },
+                { "slug": "tertiary", "color": "#8FBC8F", "name": "Sage" },
+                { "slug": "background", "color": "#EFEEE8", "name": "Birch" },
+                { "slug": "background-alt", "color": "#E4E3DB", "name": "Birch Dark" },
+                { "slug": "foreground", "color": "#1A1C18", "name": "Ink" },
+                { "slug": "foreground-muted", "color": "#4E5548", "name": "Moss Grey" },
+                { "slug": "accent", "color": "#9ACD32", "name": "Yellow Green" },
+                { "slug": "dark", "color": "#151812", "name": "Dark Panel" },
+                { "slug": "error", "color": "#8B0000", "name": "Dark Red" },
+                { "slug": "success", "color": "#228B22", "name": "Forest Green" }
             ],
             "gradients": [
                 {
@@ -24,8 +25,8 @@
                 },
                 {
                     "slug": "earth-tones",
-                    "gradient": "linear-gradient(180deg, #F5F5DC 0%, #E8E4C9 100%)",
-                    "name": "Earth Tones"
+                    "gradient": "linear-gradient(180deg, #EFEEE8 0%, #E4E3DB 100%)",
+                    "name": "Birch Fade"
                 }
             ]
         },
@@ -33,17 +34,17 @@
             "presets": [
                 {
                     "slug": "natural",
-                    "shadow": "0 4px 6px -1px rgba(47, 79, 47, 0.1), 0 2px 4px -1px rgba(47, 79, 47, 0.06)",
+                    "shadow": "0 4px 6px -1px rgba(26, 28, 24, 0.08), 0 2px 4px -1px rgba(26, 28, 24, 0.04)",
                     "name": "Natural"
                 },
                 {
                     "slug": "warm",
-                    "shadow": "0 10px 25px -5px rgba(107, 142, 35, 0.25)",
-                    "name": "Warm"
+                    "shadow": "0 10px 25px -5px rgba(107, 142, 35, 0.2)",
+                    "name": "Forest Glow"
                 },
                 {
                     "slug": "chunky",
-                    "shadow": "4px 4px 0 #556B2F",
+                    "shadow": "4px 4px 0 #2F3D1F",
                     "name": "Chunky"
                 }
             ]
