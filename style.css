@@ -120,14 +120,59 @@ Earthbound is distributed under the terms of the GNU GPL.
     line-height: 1.2;
 }
 
-/* Retro design elements */
+/* Masthead / nameplate styles */
+.masthead {
+    text-align: center;
+}
 
-/* Rounded corners everywhere */
+.masthead .wp-block-site-title {
+    font-family: var(--wp--preset--font-family--heading);
+    line-height: 1;
+}
+
+.masthead .wp-block-site-title a {
+    text-decoration: none;
+    color: var(--wp--preset--color--foreground);
+}
+
+.masthead .wp-block-site-title a:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+.masthead-dateline {
+    font-family: var(--wp--preset--font-family--mono, monospace);
+}
+
+/* Newspaper navigation — vertical bar separators */
+.newspaper-nav > .wp-block-navigation__container > .wp-block-navigation-item:not(:last-child)::after {
+    content: "|";
+    margin-left: 0.5rem;
+    color: var(--wp--preset--color--foreground-muted);
+    font-weight: 300;
+}
+
+.newspaper-nav .wp-block-navigation-item__content {
+    text-decoration: none;
+}
+
+.newspaper-nav .wp-block-navigation-item__content:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+.masthead-rule-top,
+.masthead-rule-bottom {
+    margin: 0;
+    opacity: 1;
+}
+
+/* Editorial design elements */
+
+/* Sharp edges — newspapers don't have rounded corners */
 .wp-block-group,
 .wp-block-cover,
 .wp-block-image img,
 .wp-block-post-featured-image img {
-    border-radius: var(--wp--custom--border-radius--medium);
+    border-radius: 0;
 }
 
 /* Warm shadows */
@@ -135,7 +180,7 @@ Earthbound is distributed under the terms of the GNU GPL.
     box-shadow: var(--wp--preset--shadow--warm);
 }
 
-/* Chunky button style */
+/* Chunky button style — keep border-radius on buttons only */
 .wp-block-button.is-style-chunky .wp-block-button__link {
     box-shadow: 4px 4px 0 var(--wp--preset--color--secondary);
     transition: transform var(--wp--custom--transition--fast),
@@ -152,29 +197,62 @@ Earthbound is distributed under the terms of the GNU GPL.
     box-shadow: 2px 2px 0 var(--wp--preset--color--secondary);
 }
 
-/* Section dividers - wavy pattern */
-.section-divider {
+/* Thin-thick-thin newspaper rule divider */
+.section-divider,
+.wp-block-separator.is-style-newspaper-rule {
     width: 100%;
-    height: 60px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z' fill='%23F5E6D3'/%3E%3C/svg%3E");
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: auto;
+    background: none;
+    border: none;
+    border-top: 1px solid var(--wp--preset--color--foreground);
+    border-bottom: 1px solid var(--wp--preset--color--foreground);
+    padding: 2px 0;
+    position: relative;
 }
 
-/* Groovy card styles */
+.section-divider::after,
+.wp-block-separator.is-style-newspaper-rule::after {
+    content: "";
+    display: block;
+    border-top: 3px solid var(--wp--preset--color--foreground);
+}
+
+/* Section labels — small-caps monospace above sections */
+.section-label {
+    font-family: var(--wp--preset--font-family--mono, monospace);
+    font-size: var(--wp--preset--font-size--small);
+    font-variant: small-caps;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--foreground-muted);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Byline / dateline styling */
+.byline,
+.dateline,
+.wp-block-post-date,
+.wp-block-post-author-name {
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    font-size: var(--wp--preset--font-size--small);
+}
+
+/* Editorial card styles — replaces groovy-card */
 .groovy-card {
     background: var(--wp--preset--color--background);
-    border: 3px solid var(--wp--preset--color--secondary);
-    border-radius: var(--wp--custom--border-radius--large);
-    padding: 1.5rem;
-    box-shadow: var(--wp--preset--shadow--chunky);
-    transition: transform var(--wp--custom--transition--normal),
-                box-shadow var(--wp--custom--transition--normal);
+    border-top: 3px solid var(--wp--preset--color--secondary);
+    border-bottom: 1px solid var(--wp--preset--color--secondary);
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    padding: 1.5rem 0;
+    transition: border-color var(--wp--custom--transition--normal);
 }
 
 .groovy-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 var(--wp--preset--color--secondary);
+    border-top-color: var(--wp--preset--color--primary);
 }
 
 /* Loading state styles */
