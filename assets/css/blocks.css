@@ -93,7 +93,7 @@
 
 /* Code block styling */
 .wp-block-code {
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-family: var(--wp--preset--font-family--mono);
     font-size: 0.875rem;
     line-height: 1.6;
 }
