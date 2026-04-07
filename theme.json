@@ -131,9 +131,9 @@
         },
         "custom": {
             "borderRadius": {
-                "small": "0",
-                "medium": "0",
-                "large": "0",
+                "small": "0.5rem",
+                "medium": "1rem",
+                "large": "1.5rem",
                 "pill": "9999px"
             },
             "transition": {
