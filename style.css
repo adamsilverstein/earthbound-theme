@@ -86,6 +86,51 @@ Earthbound is distributed under the terms of the GNU GPL.
     }
 }
 
+/* Masthead / nameplate styles */
+.masthead {
+    text-align: center;
+}
+
+.masthead .wp-block-site-title {
+    font-family: var(--wp--preset--font-family--heading);
+    line-height: 1;
+}
+
+.masthead .wp-block-site-title a {
+    text-decoration: none;
+    color: var(--wp--preset--color--foreground);
+}
+
+.masthead .wp-block-site-title a:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+.masthead-dateline {
+    font-family: var(--wp--preset--font-family--mono, monospace);
+}
+
+/* Newspaper navigation — vertical bar separators */
+.newspaper-nav .wp-block-navigation-item:not(:last-child)::after {
+    content: "|";
+    margin-left: 0.5rem;
+    color: var(--wp--preset--color--foreground-muted);
+    font-weight: 300;
+}
+
+.newspaper-nav .wp-block-navigation-item__content {
+    text-decoration: none;
+}
+
+.newspaper-nav .wp-block-navigation-item__content:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+.masthead-rule-top,
+.masthead-rule-bottom {
+    margin: 0;
+    opacity: 1;
+}
+
 /* Retro design elements */
 
 /* Rounded corners everywhere */

@@ -1,19 +1,37 @@
-<!-- wp:group {"tagName":"header","className":"site-header","style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem"}}},"backgroundColor":"background","layout":{"type":"constrained"}} -->
-<header class="wp-block-group site-header has-background-background-color has-background" style="padding-top:1.5rem;padding-bottom:1.5rem">
+<!-- wp:group {"tagName":"header","className":"site-header masthead","style":{"spacing":{"padding":{"top":"1rem","bottom":"0"}}},"backgroundColor":"background","layout":{"type":"constrained"}} -->
+<header class="wp-block-group site-header masthead has-background-background-color has-background" style="padding-top:1rem;padding-bottom:0">
 
-    <!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+    <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
     <div class="wp-block-group alignwide">
 
-        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-        <div class="wp-block-group">
-            <!-- wp:site-title {"level":0} /-->
-        </div>
-        <!-- /wp:group -->
+        <!-- wp:separator {"align":"wide","className":"masthead-rule-top","style":{"border":{"top":{"width":"1px"},"bottom":{"width":"3px"}}},"backgroundColor":"foreground"} -->
+        <hr class="wp-block-separator alignwide masthead-rule-top has-foreground-background-color has-background" style="border-top-width:1px;border-bottom-width:3px"/>
+        <!-- /wp:separator -->
 
-        <!-- wp:navigation {"ref":"","overlayBackgroundColor":"background","overlayTextColor":"foreground","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"2rem"}},"fontSize":"medium"} /-->
+        <!-- wp:site-title {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(2.5rem, 6vw, 5rem)","fontStyle":"normal","fontWeight":"700","letterSpacing":"-0.02em"},"spacing":{"margin":{"top":"0.5rem","bottom":"0.25rem"}}},"fontFamily":"heading"} /-->
+
+        <!-- wp:paragraph {"align":"center","className":"masthead-dateline","style":{"typography":{"fontStyle":"normal","fontWeight":"400","letterSpacing":"0.15em","textTransform":"uppercase","fontSize":"0.75rem"},"spacing":{"margin":{"top":"0","bottom":"0.5rem"}}},"textColor":"foreground-muted","fontFamily":"mono"} -->
+        <p class="has-text-align-center masthead-dateline has-foreground-muted-color has-text-color has-mono-font-family" style="margin-top:0;margin-bottom:0.5rem;font-size:0.75rem;font-style:normal;font-weight:400;letter-spacing:0.15em;text-transform:uppercase">Est. 2024 &middot; A Digital Broadsheet</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:separator {"align":"wide","className":"masthead-rule-bottom","style":{"border":{"top":{"width":"3px"},"bottom":{"width":"1px"}}},"backgroundColor":"foreground"} -->
+        <hr class="wp-block-separator alignwide masthead-rule-bottom has-foreground-background-color has-background" style="border-top-width:3px;border-bottom-width:1px"/>
+        <!-- /wp:separator -->
 
     </div>
     <!-- /wp:group -->
+
+    <!-- wp:group {"align":"wide","className":"masthead-nav","style":{"spacing":{"padding":{"top":"0.75rem","bottom":"0.75rem"}}},"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"}} -->
+    <div class="wp-block-group alignwide masthead-nav" style="padding-top:0.75rem;padding-bottom:0.75rem">
+
+        <!-- wp:navigation {"ref":"","overlayBackgroundColor":"background","overlayTextColor":"foreground","className":"newspaper-nav","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"0.25rem"},"typography":{"fontStyle":"normal","fontWeight":"400","textTransform":"uppercase","letterSpacing":"0.1em","fontSize":"0.8rem"}},"fontFamily":"heading"} /-->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:separator {"align":"wide","style":{"border":{"top":{"width":"1px"}}},"backgroundColor":"foreground"} -->
+    <hr class="wp-block-separator alignwide has-foreground-background-color has-background" style="border-top-width:1px"/>
+    <!-- /wp:separator -->
 
 </header>
 <!-- /wp:group -->
