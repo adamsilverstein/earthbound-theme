@@ -44,37 +44,93 @@
             "fluid": true,
             "fontFamilies": [
                 {
-                    "fontFamily": "Righteous, cursive",
+                    "fontFamily": "'Playfair Display', Georgia, serif",
                     "slug": "heading",
                     "name": "Heading",
                     "fontFace": [
                         {
-                            "fontFamily": "Righteous",
+                            "fontFamily": "Playfair Display",
                             "fontWeight": "400",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": ["file:./assets/fonts/righteous-v17-latin-regular.woff2"]
+                            "src": ["file:./assets/fonts/playfair-display-v40-latin-regular.woff2"]
+                        },
+                        {
+                            "fontFamily": "Playfair Display",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/playfair-display-v40-latin-700.woff2"]
+                        },
+                        {
+                            "fontFamily": "Playfair Display",
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/playfair-display-v40-latin-italic.woff2"]
+                        },
+                        {
+                            "fontFamily": "Playfair Display",
+                            "fontWeight": "700",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/playfair-display-v40-latin-700italic.woff2"]
                         }
                     ]
                 },
                 {
-                    "fontFamily": "Nunito, sans-serif",
+                    "fontFamily": "Lora, Georgia, serif",
                     "slug": "body",
                     "name": "Body",
                     "fontFace": [
                         {
-                            "fontFamily": "Nunito",
+                            "fontFamily": "Lora",
                             "fontWeight": "400",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": ["file:./assets/fonts/nunito-v26-latin-regular.woff2"]
+                            "src": ["file:./assets/fonts/lora-v37-latin-regular.woff2"]
                         },
                         {
-                            "fontFamily": "Nunito",
+                            "fontFamily": "Lora",
                             "fontWeight": "700",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": ["file:./assets/fonts/nunito-v26-latin-700.woff2"]
+                            "src": ["file:./assets/fonts/lora-v37-latin-700.woff2"]
+                        },
+                        {
+                            "fontFamily": "Lora",
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/lora-v37-latin-italic.woff2"]
+                        },
+                        {
+                            "fontFamily": "Lora",
+                            "fontWeight": "700",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/lora-v37-latin-700italic.woff2"]
+                        }
+                    ]
+                },
+                {
+                    "fontFamily": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+                    "slug": "mono",
+                    "name": "Monospace",
+                    "fontFace": [
+                        {
+                            "fontFamily": "JetBrains Mono",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/jetbrains-mono-v24-latin-regular.woff2"]
+                        },
+                        {
+                            "fontFamily": "JetBrains Mono",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/jetbrains-mono-v24-latin-700.woff2"]
                         }
                     ]
                 },
@@ -94,7 +150,7 @@
             ],
             "customFontSize": true,
             "lineHeight": true,
-            "dropCap": false
+            "dropCap": true
         },
         "spacing": {
             "units": ["rem", "em", "%", "vw"],
@@ -167,8 +223,8 @@
             "heading": {
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--heading)",
-                    "fontWeight": "400",
-                    "lineHeight": "1.2"
+                    "fontWeight": "700",
+                    "lineHeight": "1.15"
                 },
                 "color": {
                     "text": "var(--wp--preset--color--secondary)"
@@ -220,7 +276,7 @@
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--heading)",
                     "fontSize": "var(--wp--preset--font-size--medium)",
-                    "fontWeight": "400"
+                    "fontWeight": "700"
                 },
                 ":hover": {
                     "color": {
