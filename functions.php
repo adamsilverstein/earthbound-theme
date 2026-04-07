@@ -262,6 +262,15 @@ function earthbound_register_block_styles(): void {
             'label' => esc_html__('Retro', 'earthbound'),
         )
     );
+
+    // Newspaper rule separator style.
+    register_block_style(
+        'core/separator',
+        array(
+            'name'  => 'newspaper-rule',
+            'label' => esc_html__('Newspaper Rule', 'earthbound'),
+        )
+    );
 }
 add_action('init', 'earthbound_register_block_styles');
 
