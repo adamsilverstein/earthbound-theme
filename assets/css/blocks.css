@@ -131,7 +131,7 @@
 .wp-block-search .wp-block-search__input:focus {
     outline: none;
     border-color: var(--wp--preset--color--primary, #D4A03C);
-    box-shadow: 0 0 0 2px rgba(212, 160, 60, 0.3);
+    box-shadow: 0 0 0 2px rgba(147, 111, 38, 0.3);
 }
 
 .wp-block-search .wp-block-search__button {
