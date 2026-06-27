@@ -10,23 +10,24 @@
         },
         "color": {
             "palette": [
-                { "slug": "primary", "color": "#D4A03C", "name": "Amber" },
-                { "slug": "secondary", "color": "#3D2B1F", "name": "Dark Brown" },
-                { "slug": "tertiary", "color": "#8B7355", "name": "Warm Tan" },
-                { "slug": "background", "color": "#F0EDE6", "name": "Newsprint" },
-                { "slug": "background-alt", "color": "#E8E4DC", "name": "Newsprint Dark" },
-                { "slug": "foreground", "color": "#1A1A1A", "name": "Ink" },
-                { "slug": "foreground-muted", "color": "#5C5549", "name": "Warm Grey" },
-                { "slug": "accent", "color": "#D4A03C", "name": "Amber Accent" },
-                { "slug": "dark", "color": "#1A1712", "name": "Dark Panel" },
-                { "slug": "error", "color": "#8B0000", "name": "Dark Red" },
-                { "slug": "success", "color": "#556B2F", "name": "Olive" }
+                { "slug": "primary", "color": "#936F26", "name": "Brass" },
+                { "slug": "secondary", "color": "#382B1B", "name": "Bistre" },
+                { "slug": "tertiary", "color": "#B49C73", "name": "Antique Tan" },
+                { "slug": "background", "color": "#ECE2CC", "name": "Parchment" },
+                { "slug": "background-alt", "color": "#E5D9BD", "name": "Parchment Shade" },
+                { "slug": "foreground", "color": "#2A2218", "name": "Walnut Ink" },
+                { "slug": "foreground-muted", "color": "#5B5141", "name": "Warm Grey" },
+                { "slug": "accent", "color": "#586736", "name": "Moss" },
+                { "slug": "clay", "color": "#A2502A", "name": "Clay" },
+                { "slug": "dark", "color": "#1F1A12", "name": "Dark Panel" },
+                { "slug": "error", "color": "#9E3B22", "name": "Rust" },
+                { "slug": "success", "color": "#4F6B33", "name": "Moss Green" }
             ],
             "gradients": [
                 {
                     "slug": "warm-sunset",
-                    "gradient": "linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--tertiary) 100%)",
-                    "name": "Warm Sunset"
+                    "gradient": "linear-gradient(155deg, #E4CB8B 0%, #B6912F 38%, #836321 70%, #C9AC68 100%)",
+                    "name": "Brass Patina"
                 },
                 {
                     "slug": "earth-tones",
@@ -79,9 +80,44 @@
                     ]
                 },
                 {
-                    "fontFamily": "Lora, Georgia, serif",
+                    "fontFamily": "'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif",
                     "slug": "body",
                     "name": "Body",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Hanken Grotesk",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/hanken-grotesk-v12-latin-regular.woff2"]
+                        },
+                        {
+                            "fontFamily": "Hanken Grotesk",
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/hanken-grotesk-v12-latin-500.woff2"]
+                        },
+                        {
+                            "fontFamily": "Hanken Grotesk",
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/hanken-grotesk-v12-latin-600.woff2"]
+                        },
+                        {
+                            "fontFamily": "Hanken Grotesk",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": ["file:./assets/fonts/hanken-grotesk-v12-latin-700.woff2"]
+                        }
+                    ]
+                },
+                {
+                    "fontFamily": "Lora, Georgia, serif",
+                    "slug": "serif",
+                    "name": "Serif",
                     "fontFace": [
                         {
                             "fontFamily": "Lora",
@@ -114,23 +150,23 @@
                     ]
                 },
                 {
-                    "fontFamily": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+                    "fontFamily": "'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
                     "slug": "mono",
                     "name": "Monospace",
                     "fontFace": [
                         {
-                            "fontFamily": "JetBrains Mono",
+                            "fontFamily": "Space Mono",
                             "fontWeight": "400",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": ["file:./assets/fonts/jetbrains-mono-v24-latin-regular.woff2"]
+                            "src": ["file:./assets/fonts/space-mono-v15-latin-regular.woff2"]
                         },
                         {
-                            "fontFamily": "JetBrains Mono",
+                            "fontFamily": "Space Mono",
                             "fontWeight": "700",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": ["file:./assets/fonts/jetbrains-mono-v24-latin-700.woff2"]
+                            "src": ["file:./assets/fonts/space-mono-v15-latin-700.woff2"]
                         }
                     ]
                 },
@@ -171,13 +207,13 @@
             "presets": [
                 {
                     "slug": "natural",
-                    "shadow": "0 4px 6px -1px rgba(26, 26, 26, 0.08), 0 2px 4px -1px rgba(26, 26, 26, 0.04)",
+                    "shadow": "0 2px 0 rgba(111, 83, 24, 0.10), 0 6px 16px rgba(42, 34, 24, 0.14)",
                     "name": "Natural"
                 },
                 {
                     "slug": "warm",
-                    "shadow": "0 10px 25px -5px rgba(212, 160, 60, 0.2)",
-                    "name": "Amber Glow"
+                    "shadow": "0 10px 25px -5px rgba(147, 111, 38, 0.22)",
+                    "name": "Brass Lift"
                 },
                 {
                     "slug": "chunky",
@@ -188,9 +224,9 @@
         },
         "custom": {
             "borderRadius": {
-                "small": "0.5rem",
-                "medium": "1rem",
-                "large": "1.5rem",
+                "small": "0.125rem",
+                "medium": "0.25rem",
+                "large": "0.4375rem",
                 "pill": "9999px"
             },
             "transition": {
@@ -271,7 +307,7 @@
                     "text": "var(--wp--preset--color--background)"
                 },
                 "border": {
-                    "radius": "var(--wp--custom--border-radius--pill)"
+                    "radius": "var(--wp--custom--border-radius--medium)"
                 },
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--heading)",

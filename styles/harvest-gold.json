@@ -1,32 +1,33 @@
 {
     "$schema": "https://schemas.wp.org/trunk/theme.json",
     "version": 3,
-    "title": "Harvest Gold",
+    "title": "Patina",
     "settings": {
         "color": {
             "palette": [
-                { "slug": "primary", "color": "#D4A03C", "name": "Amber" },
-                { "slug": "secondary", "color": "#3D2B1F", "name": "Dark Brown" },
-                { "slug": "tertiary", "color": "#8B7355", "name": "Warm Tan" },
-                { "slug": "background", "color": "#F0EDE6", "name": "Newsprint" },
-                { "slug": "background-alt", "color": "#E8E4DC", "name": "Newsprint Dark" },
-                { "slug": "foreground", "color": "#1A1A1A", "name": "Ink" },
-                { "slug": "foreground-muted", "color": "#5C5549", "name": "Warm Grey" },
-                { "slug": "accent", "color": "#D4A03C", "name": "Amber Accent" },
-                { "slug": "dark", "color": "#1A1712", "name": "Dark Panel" },
-                { "slug": "error", "color": "#8B0000", "name": "Dark Red" },
-                { "slug": "success", "color": "#556B2F", "name": "Olive" }
+                { "slug": "primary", "color": "#936F26", "name": "Brass" },
+                { "slug": "secondary", "color": "#382B1B", "name": "Bistre" },
+                { "slug": "tertiary", "color": "#B49C73", "name": "Antique Tan" },
+                { "slug": "background", "color": "#ECE2CC", "name": "Parchment" },
+                { "slug": "background-alt", "color": "#E5D9BD", "name": "Parchment Shade" },
+                { "slug": "foreground", "color": "#2A2218", "name": "Walnut Ink" },
+                { "slug": "foreground-muted", "color": "#5B5141", "name": "Warm Grey" },
+                { "slug": "accent", "color": "#586736", "name": "Moss" },
+                { "slug": "clay", "color": "#A2502A", "name": "Clay" },
+                { "slug": "dark", "color": "#1F1A12", "name": "Dark Panel" },
+                { "slug": "error", "color": "#9E3B22", "name": "Rust" },
+                { "slug": "success", "color": "#4F6B33", "name": "Moss Green" }
             ],
             "gradients": [
                 {
                     "slug": "warm-sunset",
-                    "gradient": "linear-gradient(135deg, #D4A03C 0%, #8B7355 100%)",
-                    "name": "Amber Wash"
+                    "gradient": "linear-gradient(155deg, #E4CB8B 0%, #B6912F 38%, #836321 70%, #C9AC68 100%)",
+                    "name": "Brass Patina"
                 },
                 {
                     "slug": "earth-tones",
-                    "gradient": "linear-gradient(180deg, #F0EDE6 0%, #E8E4DC 100%)",
-                    "name": "Newsprint Fade"
+                    "gradient": "linear-gradient(180deg, #ECE2CC 0%, #E5D9BD 100%)",
+                    "name": "Parchment Fade"
                 }
             ]
         },
@@ -34,17 +35,17 @@
             "presets": [
                 {
                     "slug": "natural",
-                    "shadow": "0 4px 6px -1px rgba(26, 26, 26, 0.08), 0 2px 4px -1px rgba(26, 26, 26, 0.04)",
+                    "shadow": "0 2px 0 rgba(111, 83, 24, 0.10), 0 6px 16px rgba(42, 34, 24, 0.14)",
                     "name": "Natural"
                 },
                 {
                     "slug": "warm",
-                    "shadow": "0 10px 25px -5px rgba(212, 160, 60, 0.2)",
-                    "name": "Amber Glow"
+                    "shadow": "0 10px 25px -5px rgba(147, 111, 38, 0.22)",
+                    "name": "Brass Lift"
                 },
                 {
                     "slug": "chunky",
-                    "shadow": "4px 4px 0 #3D2B1F",
+                    "shadow": "4px 4px 0 #382B1B",
                     "name": "Chunky"
                 }
             ]
