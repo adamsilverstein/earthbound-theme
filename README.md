@@ -49,6 +49,26 @@ npx @wordpress/env start
 > docker cp . $(docker ps --format '{{.Names}}' | grep wordpress-1 | grep -v tests):/var/www/html/wp-content/themes/earthbound-theme/
 > ```
 
+## Building for Production
+
+Package a clean, upload-ready zip containing only the files the theme needs at
+runtime (no dev tooling, local config, or demo content):
+
+```bash
+npm install   # once, installs the archiver dev dependency
+npm run build
+```
+
+This produces `earthbound.zip` with a single top-level `earthbound/` folder.
+Upload it via **Appearance > Themes > Add New > Upload Theme**, or unzip it into
+`wp-content/themes/`.
+
+The list of bundled files lives in `bin/build.mjs` (the `INCLUDE` array) — add a
+path there when shipping a new production file. Excluded by design: `.git`,
+`node_modules`, `package.json`, `.wp-env.json`, `CLAUDE.md`,
+`project-instructions.md`, this `README.md`, and the `assets/images` /
+`assets/screenshots` demo assets.
+
 ## Style Variations
 
 | Variation | Primary | Background |
