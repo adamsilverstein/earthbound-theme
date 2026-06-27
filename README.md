@@ -2,7 +2,7 @@
 
 A WordPress block theme blending old-time newspaper editorial design with cyberpunk amber aesthetics. Built for WordPress 6.7+ using Full Site Editing, the Interactivity API, and modern PHP 8.1+ features.
 
-![Home page — desktop](assets/screenshots/home-desktop.png)
+![Home page — desktop](assets/screenshots/home-desktop.webp)
 
 ## Features
 
@@ -24,13 +24,13 @@ A WordPress block theme blending old-time newspaper editorial design with cyberp
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Home desktop](assets/screenshots/home-desktop.png) | ![Home mobile](assets/screenshots/home-mobile.png) |
+| ![Home desktop](assets/screenshots/home-desktop.webp) | ![Home mobile](assets/screenshots/home-mobile.webp) |
 
 ### Single Post
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Single desktop](assets/screenshots/single-desktop.png) | ![Single mobile](assets/screenshots/single-mobile.png) |
+| ![Single desktop](assets/screenshots/single-desktop.webp) | ![Single mobile](assets/screenshots/single-mobile.webp) |
 
 ## Installation
 
