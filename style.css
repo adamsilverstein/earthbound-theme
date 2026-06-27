@@ -93,8 +93,8 @@ h1 a:hover,
 h2 a:hover,
 h3 a:hover,
 .wp-block-post-title a:hover {
-    text-shadow: 0 0 20px rgba(212, 160, 60, 0.35),
-                 0 0 40px rgba(212, 160, 60, 0.15);
+    text-shadow: 0 0 20px rgba(147, 111, 38, 0.35),
+                 0 0 40px rgba(147, 111, 38, 0.15);
 }
 
 /* Amber underline accent on links */
@@ -125,14 +125,14 @@ h3 a:hover,
 
 /* Amber glow shadow for cards */
 .has-amber-glow {
-    box-shadow: 0 0 15px rgba(212, 160, 60, 0.15),
-                0 0 30px rgba(212, 160, 60, 0.08);
+    box-shadow: 0 0 15px rgba(147, 111, 38, 0.15),
+                0 0 30px rgba(147, 111, 38, 0.08);
 }
 
 /* Amber glow button variant */
 .wp-block-button.is-style-chunky .wp-block-button__link:hover {
     box-shadow: 6px 6px 0 var(--wp--preset--color--secondary),
-                0 0 20px rgba(212, 160, 60, 0.25);
+                0 0 20px rgba(147, 111, 38, 0.25);
 }
 
 /* Dark panel sections — cyberpunk amber on dark */
@@ -152,7 +152,7 @@ h3 a:hover,
 }
 
 .has-dark-background-color a:hover {
-    text-shadow: 0 0 15px rgba(212, 160, 60, 0.5);
+    text-shadow: 0 0 15px rgba(147, 111, 38, 0.5);
 }
 
 /* Reduced motion — disable glow animations */
