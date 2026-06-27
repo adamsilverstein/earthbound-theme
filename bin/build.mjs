@@ -15,7 +15,7 @@
 
 import { createWriteStream } from 'node:fs';
 import { readdir, readFile, stat } from 'node:fs/promises';
-import { dirname, join, relative, resolve } from 'node:path';
+import { dirname, join, posix, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import archiver from 'archiver';
 
@@ -53,6 +53,9 @@ const EXCLUDE_NAMES = new Set( [ '.DS_Store', 'Thumbs.db' ] );
  * @return {Promise<string[]>} Sorted list of file paths relative to the root.
  */
 async function collect( rel ) {
+	// `rel` is always POSIX-separated (see INCLUDE and the recursion below);
+	// native join() accepts forward slashes, so filesystem access stays correct
+	// cross-platform while the stored archive name remains POSIX.
 	const abs = join( THEME_ROOT, rel );
 	let info;
 	try {
@@ -71,7 +74,9 @@ async function collect( rel ) {
 		if ( EXCLUDE_NAMES.has( entry.name ) ) {
 			continue;
 		}
-		files.push( ...( await collect( join( rel, entry.name ) ) ) );
+		// Build child paths with POSIX separators so ZIP entry names use `/`
+		// on every platform (the ZIP format requires forward slashes).
+		files.push( ...( await collect( posix.join( rel, entry.name ) ) ) );
 	}
 	return files;
 }
@@ -93,6 +98,7 @@ const archive = archiver( 'zip', { zlib: { level: 9 } } );
 
 const done = new Promise( ( resolvePromise, rejectPromise ) => {
 	output.on( 'close', resolvePromise );
+	output.on( 'error', rejectPromise ); // Surface write failures (disk full, permissions).
 	archive.on( 'warning', rejectPromise );
 	archive.on( 'error', rejectPromise );
 } );
