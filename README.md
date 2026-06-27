@@ -1,6 +1,6 @@
 # Earthbound Theme
 
-A WordPress block theme blending old-time newspaper editorial design with cyberpunk amber aesthetics. Built for WordPress 6.7+ using Full Site Editing, the Interactivity API, and modern PHP 8.1+ features.
+A WordPress block theme blending old-time newspaper editorial design with warm, brass-and-parchment earth tones. Built for WordPress 6.7+ using Full Site Editing, the Interactivity API, and modern PHP 8.1+ features.
 
 ![Home page — desktop](assets/screenshots/home-desktop.webp)
 
@@ -8,12 +8,12 @@ A WordPress block theme blending old-time newspaper editorial design with cyberp
 
 - **Newspaper masthead header** with decorative rules, centered title, monospace dateline, and section navigation with vertical bar separators
 - **Multi-column front page** with asymmetric 2/3 + 1/3 lead/sidebar layout, column rules, and below-the-fold grid
-- **Editorial serif typography** — Playfair Display for headlines, Lora for body, JetBrains Mono for code and terminal accents
+- **Editorial typography** — Playfair Display for headlines, Hanken Grotesk for body, Space Mono for code and labels (Lora ships as an optional serif family)
 - **Fluid type scale** with dramatic range (hero up to 6rem) for broadsheet-style headline hierarchy
-- **Amber cyberpunk accents** — amber glow on headline hover, terminal badges, amber underline links, dark panel sections
+- **Brass accents** — engraved brass glow on headline hover, terminal badges, brass underline links, dark panel sections
 - **Typographic flourishes** — thin-thick-thin newspaper rules, small-caps section labels, drop caps, pull quotes with hairline borders
-- **Newsprint-amber color palette** — aged cream background, near-black ink, warm amber accent, dark panel color for cyberpunk sections
-- **Four style variations**: Harvest Gold, Desert Sunset, Forest Grove, Ocean Tide
+- **Parchment-and-brass color palette** — warm parchment background, walnut ink, antique brass primary, moss and clay earth accents
+- **Four style variations**: Patina, Desert Sunset, Forest Grove, Ocean Tide
 - **Projects custom post type** for portfolio display
 - **GitHub and WordPress Trac feed integration** via custom blocks
 - **Full accessibility** — keyboard navigation, screen readers, reduced motion, focus indicators
@@ -73,7 +73,7 @@ path there when shipping a new production file. Excluded by design: `.git`,
 
 | Variation | Primary | Background |
 |-----------|---------|------------|
-| **Harvest Gold** (default) | Amber `#D4A03C` | Newsprint `#F0EDE6` |
+| **Patina** (default) | Brass `#936F26` | Parchment `#ECE2CC` |
 | **Desert Sunset** | Terracotta `#E07B53` | Parchment `#F2EDE6` |
 | **Forest Grove** | Olive `#6B8E23` | Birch `#EFEEE8` |
 | **Ocean Tide** | Cadet Blue `#5F9EA0` | Sea Foam `#ECEEED` |
@@ -83,8 +83,9 @@ path there when shipping a new production file. Excluded by design: `.git`,
 | Role | Font | Usage |
 |------|------|-------|
 | **Headings** | Playfair Display | Headlines, site title, buttons |
-| **Body** | Lora | Body copy, excerpts, paragraphs |
-| **Monospace** | JetBrains Mono | Code blocks, datelines, terminal badges |
+| **Body** | Hanken Grotesk | Body copy, excerpts, paragraphs |
+| **Serif** | Lora | Optional serif accents |
+| **Monospace** | Space Mono | Code blocks, datelines, terminal badges |
 
 ## Requirements
 
