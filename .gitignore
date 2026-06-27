@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Build output
+/earthbound.zip
+*.zip
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/
