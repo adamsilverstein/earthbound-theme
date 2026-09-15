@@ -56,7 +56,14 @@ function earthbound_register_contact_endpoint(): void {
                 'email'   => array(
                     'required'          => true,
                     'type'              => 'string',
-                    'sanitize_callback' => 'sanitize_email',
+                    /*
+                     * Deliberately not sanitize_email(): it reduces a malformed
+                     * address to an empty string, which is indistinguishable
+                     * from an omitted one and produces the wrong error message.
+                     * The value is validated with is_email() and normalised
+                     * below instead.
+                     */
+                    'sanitize_callback' => 'sanitize_text_field',
                 ),
                 'message' => array(
                     'required'          => true,
@@ -182,6 +189,8 @@ function earthbound_handle_contact_submission(WP_REST_Request $request): WP_REST
         $errors['email'] = esc_html__('Please enter your email address.', 'earthbound');
     } elseif (!is_email($email)) {
         $errors['email'] = esc_html__('Please enter a valid email address.', 'earthbound');
+    } else {
+        $email = sanitize_email($email);
     }
 
     if ('' === $message) {
@@ -312,12 +321,22 @@ function earthbound_build_contact_body(string $name, string $email, string $mess
  * @return array<int, string> Email headers.
  */
 function earthbound_build_contact_headers(string $name, string $email): array {
-    $reply_name  = earthbound_strip_header_breaks($name);
     $reply_email = earthbound_strip_header_breaks($email);
+
+    /*
+     * Quote the display name so characters that are significant in a header,
+     * such as a colon or an angle bracket, cannot be read as structure by a
+     * mail parser. Line breaks are already removed, so this is belt and braces.
+     */
+    $reply_name = str_replace(
+        array('\\', '"'),
+        array('\\\\', '\\"'),
+        earthbound_strip_header_breaks($name)
+    );
 
     return array(
         'Content-Type: text/plain; charset=UTF-8',
-        sprintf('Reply-To: %s <%s>', $reply_name, $reply_email),
+        sprintf('Reply-To: "%s" <%s>', $reply_name, $reply_email),
     );
 }
 

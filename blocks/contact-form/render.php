@@ -78,7 +78,6 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 required
                 aria-required="true"
                 aria-describedby="<?php echo esc_attr($name_id); ?>-error"
-                data-wp-bind--value="context.name"
                 data-wp-bind--aria-invalid="state.hasNameError"
                 data-wp-bind--disabled="context.isSubmitting"
                 data-wp-on--input="actions.updateName"
@@ -106,7 +105,6 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 required
                 aria-required="true"
                 aria-describedby="<?php echo esc_attr($email_id); ?>-error"
-                data-wp-bind--value="context.email"
                 data-wp-bind--aria-invalid="state.hasEmailError"
                 data-wp-bind--disabled="context.isSubmitting"
                 data-wp-on--input="actions.updateEmail"
@@ -156,7 +154,6 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 name="website"
                 tabindex="-1"
                 autocomplete="off"
-                data-wp-bind--value="context.website"
                 data-wp-on--input="actions.updateWebsite"
             />
         </div>

@@ -8,7 +8,20 @@
  * @package Earthbound
  */
 
-import { store, getContext, getElement } from '@wordpress/interactivity';
+import * as interactivity from '@wordpress/interactivity';
+
+const { store, getContext, getElement } = interactivity;
+
+/**
+ * withSyncEvent() arrived in WordPress 6.9, and from 7.0 it is required for any
+ * action that calls a synchronous event method such as preventDefault().
+ *
+ * It is read off a namespace import rather than named directly, because a named
+ * import of a missing export fails at module resolution, and the theme still
+ * supports 6.7 and 6.8. Those releases ran handlers synchronously regardless,
+ * so passing the handler straight through is the correct behaviour there.
+ */
+const withSyncEvent = interactivity.withSyncEvent ?? ( ( handler ) => handler );
 
 /**
  * Minimal email shape check. The server is the authority via is_email().
@@ -37,24 +50,10 @@ const { state, actions, callbacks } = store( 'earthbound/contact-form', {
 			return context.isSubmitting ? 'Sending…' : context.submitLabel;
 		},
 		get statusMessage() {
-			const context = getContext();
-
-			if ( context.isSubmitting ) {
-				return 'Sending your message.';
-			}
-			if ( context.isSent ) {
-				return context.successMessage;
-			}
-			if ( context.formError ) {
-				return context.formError;
-			}
-
-			const fieldErrors = Object.values( context.errors ).filter( Boolean );
-			if ( fieldErrors.length > 0 ) {
-				return `${ fieldErrors.length } field needs attention: ${ fieldErrors.join( ' ' ) }`;
-			}
-
-			return '';
+			// Only the in-flight state. The confirmation announces itself through
+			// role="status" and the form-level failure through role="alert", so
+			// repeating either here would announce it twice.
+			return getContext().isSubmitting ? 'Sending your message.' : '';
 		},
 	},
 	actions: {
@@ -76,7 +75,7 @@ const { state, actions, callbacks } = store( 'earthbound/contact-form', {
 		updateWebsite( event ) {
 			getContext().website = event.target.value;
 		},
-		*submit( event ) {
+		submit: withSyncEvent( function* ( event ) {
 			event.preventDefault();
 
 			const context = getContext();
@@ -149,7 +148,7 @@ const { state, actions, callbacks } = store( 'earthbound/contact-form', {
 			} finally {
 				context.isSubmitting = false;
 			}
-		},
+		} ),
 	},
 	callbacks: {
 		init() {
