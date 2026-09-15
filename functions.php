@@ -14,6 +14,7 @@ define('EARTHBOUND_VERSION', '1.0.0');
 // Include required files.
 require_once get_template_directory() . '/inc/block-registration.php';
 require_once get_template_directory() . '/inc/api-endpoints.php';
+require_once get_template_directory() . '/inc/contact-form.php';
 require_once get_template_directory() . '/inc/transient-caching.php';
 require_once get_template_directory() . '/inc/accessibility-helpers.php';
 require_once get_template_directory() . '/inc/customizer.php';
