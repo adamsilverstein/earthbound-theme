@@ -223,12 +223,24 @@ h3 a:hover,
     font-family: var(--wp--preset--font-family--mono, monospace);
 }
 
-/* Newspaper navigation — vertical bar separators */
-.newspaper-nav > .wp-block-navigation__container > .wp-block-navigation-item:not(:last-child)::after {
-    content: "|";
-    margin-left: 0.5rem;
+/* Newspaper navigation — dot separators between top-level items.
+   The container <ul> sits several levels below the <nav> inside the
+   responsive overlay markup, so this cannot be a direct-child selector. */
+.newspaper-nav .wp-block-navigation__container > .wp-block-navigation-item:not(:last-child)::after {
+    content: "\00b7";
+    /* Empty alt text keeps the decorative dot out of the accessibility tree. */
+    content: "\00b7" / "";
+    margin-inline-start: 0.75rem;
     color: var(--wp--preset--color--foreground-muted);
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* The mobile overlay stacks items vertically, where trailing dots read as noise. */
+.newspaper-nav .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item::after {
+    content: none;
 }
 
 .newspaper-nav .wp-block-navigation-item__content {
