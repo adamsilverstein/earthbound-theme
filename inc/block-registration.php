@@ -20,6 +20,7 @@ function earthbound_register_blocks(): void {
         'project-card',
         'github-feed',
         'trac-feed',
+        'contact-form',
     );
 
     foreach ($blocks as $block) {
