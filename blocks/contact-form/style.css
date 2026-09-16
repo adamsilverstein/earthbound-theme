@@ -1,6 +1,13 @@
 /**
  * Contact Form block styles.
  *
+ * Selectors are scoped under .contact-form rather than used on their own.
+ * Some plugins enqueue wp-admin stylesheets on the front end, and forms.css
+ * there styles input[type="text"] and friends. That is a type plus attribute
+ * selector, which outranks a lone class no matter the load order, so a single
+ * .contact-form__input would lose its border, padding and background. Two
+ * classes win the comparison outright.
+ *
  * @package Earthbound
  */
 
@@ -8,11 +15,11 @@
     max-width: 38rem;
 }
 
-.contact-form__field {
+.contact-form .contact-form__field {
     margin-bottom: 1.5rem;
 }
 
-.contact-form__label {
+.contact-form .contact-form__label {
     display: block;
     margin-bottom: 0.4rem;
     font-family: var(--wp--preset--font-family--heading);
@@ -23,11 +30,11 @@
     color: var(--wp--preset--color--foreground);
 }
 
-.contact-form__required {
+.contact-form .contact-form__required {
     color: var(--wp--preset--color--primary);
 }
 
-.contact-form__input {
+.contact-form .contact-form__input {
     display: block;
     width: 100%;
     padding: 0.7rem 0.85rem;
@@ -40,28 +47,28 @@
     line-height: 1.5;
 }
 
-.contact-form__textarea {
+.contact-form .contact-form__textarea {
     resize: vertical;
     min-height: 9rem;
 }
 
-.contact-form__input:focus {
+.contact-form .contact-form__input:focus {
     outline: 2px solid var(--wp--preset--color--primary);
     outline-offset: 2px;
 }
 
-.contact-form__input[aria-invalid="true"] {
+.contact-form .contact-form__input[aria-invalid="true"] {
     border-color: var(--wp--preset--color--error);
     border-width: 2px;
 }
 
-.contact-form__input[disabled] {
+.contact-form .contact-form__input[disabled] {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.contact-form__error,
-.contact-form__form-error {
+.contact-form .contact-form__error,
+.contact-form .contact-form__form-error {
     margin: 0.4rem 0 0;
     color: var(--wp--preset--color--error);
     font-family: var(--wp--preset--font-family--body);
@@ -69,20 +76,20 @@
     line-height: 1.4;
 }
 
-.contact-form__error[hidden],
-.contact-form__form-error[hidden],
-.contact-form__success[hidden],
-.contact-form__form[hidden] {
+.contact-form .contact-form__error[hidden],
+.contact-form .contact-form__form-error[hidden],
+.contact-form .contact-form__success[hidden],
+.contact-form .contact-form__form[hidden] {
     display: none;
 }
 
-.contact-form__form-error {
+.contact-form .contact-form__form-error {
     margin-top: 1rem;
 }
 
 /* Honeypot. Removed from the accessible tree in the markup and kept out of
    sight here, so only automated submissions ever fill it in. */
-.contact-form__trap {
+.contact-form .contact-form__trap {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -94,11 +101,11 @@
     border: 0;
 }
 
-.contact-form__actions {
+.contact-form .contact-form__actions {
     margin-top: 1.75rem;
 }
 
-.contact-form__submit {
+.contact-form .contact-form__submit {
     padding: 0.7rem 1.75rem;
     border: 2px solid var(--wp--preset--color--foreground);
     border-radius: 0;
@@ -113,22 +120,22 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.contact-form__submit:hover {
+.contact-form .contact-form__submit:hover {
     background-color: var(--wp--preset--color--primary);
     border-color: var(--wp--preset--color--primary);
 }
 
-.contact-form__submit:focus-visible {
+.contact-form .contact-form__submit:focus-visible {
     outline: 2px solid var(--wp--preset--color--primary);
     outline-offset: 3px;
 }
 
-.contact-form__submit[disabled] {
+.contact-form .contact-form__submit[disabled] {
     opacity: 0.6;
     cursor: wait;
 }
 
-.contact-form__success {
+.contact-form .contact-form__success {
     padding: 1.25rem 1.5rem;
     border-top: 3px solid var(--wp--preset--color--foreground);
     border-bottom: 1px solid var(--wp--preset--color--foreground);
@@ -138,12 +145,12 @@
     color: var(--wp--preset--color--foreground);
 }
 
-.contact-form__success:focus-visible {
+.contact-form .contact-form__success:focus-visible {
     outline: 2px solid var(--wp--preset--color--primary);
     outline-offset: 3px;
 }
 
-.contact-form__noscript {
+.contact-form .contact-form__noscript {
     margin: 0;
     color: var(--wp--preset--color--error);
 }
