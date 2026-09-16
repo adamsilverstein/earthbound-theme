@@ -251,6 +251,19 @@ h3 a:hover,
     color: var(--wp--preset--color--primary);
 }
 
+/* Menu links should show the hand, not the I-beam.
+
+   The block editor stylesheet sets `cursor: text` on
+   `.wp-block-navigation-item .wp-block-navigation-item__content`, which is
+   correct in the editor because the labels there are editable rich text. Some
+   plugins enqueue that stylesheet on the front end, where the rule outranks the
+   browser default of `pointer` for a link. Repeating the ancestor class clears
+   the two-class selector it has to beat. This covers both navigation blocks -
+   the masthead and the footer - so it is not scoped to .newspaper-nav. */
+.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content {
+    cursor: pointer;
+}
+
 .masthead-rule-top,
 .masthead-rule-bottom {
     margin: 0;
